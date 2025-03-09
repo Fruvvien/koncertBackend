@@ -12,3 +12,12 @@ datasource db {
   provider = "mysql"
   url      = env("DATABASE_URL")
 }
+
+
+model Koncert {
+  id Int @id @default(autoincrement())
+  fellepo String 
+  kezdesiIdo DateTime @default(now())
+  idotartam Int
+  elmaradE Boolean? @default(false) 
+}
